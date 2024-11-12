@@ -61,6 +61,8 @@ jobs:
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
+        env:
+          AZURE_OPENAI_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
         with:
           app-name: 'nodebb-the-bots-translator-service'
           slot-name: 'Production'
