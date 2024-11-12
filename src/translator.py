@@ -2,7 +2,7 @@ from openai import AzureOpenAI
 
 # Initialize the Azure OpenAI client
 client = AzureOpenAI(
-    api_key="AZURE_OPENAI_KEY", 
+    api_key=AZURE_OPENAI_KEY, 
     api_version="2024-02-15-preview",
     azure_endpoint="https://openai-the-bots.openai.azure.com/"  # Replace with your Azure endpoint
 )
