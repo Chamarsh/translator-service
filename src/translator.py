@@ -1,7 +1,6 @@
 from openai import AzureOpenAI
 import os
 
-# Initialize the Azure OpenAI client
 client = AzureOpenAI(
     api_key=os.getenv("AZURE_OPENAI_KEY"), 
     api_version="2024-02-15-preview",
@@ -9,6 +8,7 @@ client = AzureOpenAI(
 )
 
 def translate_content(post: str) -> tuple[bool, str]:
+    # Initialize the Azure OpenAI client
     response = client.chat.completions.create(
     model="gpt-4o-mini",
     messages=[
